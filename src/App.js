@@ -7,10 +7,10 @@ import './App.css';
 function App() {
   return (
     <>
-     <BrowserRouter>
+     <BrowserRouter basename='/sample-dashboard'>
       {/* <NavSection /> */}
       <Routes>
-        <Route path="/" element={<Layouts />} />
+        <Route exact path="/" element={<Layouts />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </BrowserRouter>
