@@ -71,15 +71,18 @@ function NavSection() {
                 </div>
                 {cardDetails.map((currentDetails, cardIndex) => (
                   <div className='col-sm-6 col-lg-3 col-6  p-1 '>
-                    <Card key={cardIndex} className='pt-3 navy-blue-txt shadow'>
+                    <Card key={cardIndex} className='pt-3 navy-blue-txt shadow homecard'>
                       <CardTitle className='d-flex justify-content-between w-100 px-3'>
                         <div className='fs-3'>{currentDetails.iconLogo}</div>
-                        <div className='fs-5 position-relative '>
+                        <div className='fs-5  position-relative'>
                           <HiDotsVertical className='HiDotsVertical' style={{ cursor: 'pointer' }} onClick={() => toggleDropdown(cardIndex)} />
                           {openCardIndex === cardIndex && (
-                            <div className="dropdown-content position-absolute rounded shadow">
+                            <div className={` dropdown-content position-absolute rounded shadow`}>
                               {/* Dropdown content goes here */}
-                                <div className='d-flex'>
+
+                              {cardIndex == 2 ? 
+                                <>
+                               <div className='d-flex'>
                                   <div><FaDollarSign /></div>
                                   <div>make payment</div>
                                 </div>
@@ -91,7 +94,24 @@ function NavSection() {
                                   <div><FaEye /></div>
                                   <div>View account details</div>
                                 </div>
-                                
+                                </>
+                                 : ''}
+                                 {cardIndex == 0 ? 
+                                <>
+                               <div className='d-flex'>
+                                  <div><FaDollarSign /></div>
+                                  <div>make payment</div>
+                                </div>
+                                <div className='d-flex'>
+                                  <div><FaDatabase /></div>
+                                  <div>View balance details</div>
+                                </div>
+                                <div className='d-flex'>
+                                  <div><FaEye /></div>
+                                  <div>View account details</div>
+                                </div>
+                                </>
+                                 : ''}
                                 
                             </div>
                           )}

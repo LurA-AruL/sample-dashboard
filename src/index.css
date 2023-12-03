@@ -194,9 +194,14 @@ top: 13px !important;
 
   }
 }
-@media (max-width:395px) {
+@media (395px <= width <= 405px) {
   .livechart{
     max-width: 280px !important;
+  }
+}
+@media (max-width:405px) {
+  .homecard{
+    min-height: 160px;
   }
 }
 /*
