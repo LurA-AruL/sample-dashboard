@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <>
-     <BrowserRouter basename='/sample-dashboard'>
+     <BrowserRouter basename='sample-dashboard'>
       {/* <NavSection /> */}
       <Routes>
         <Route exact path="/" element={<Layouts />} />
